@@ -1,10 +1,16 @@
-import './App.css';
+import React from 'react';
 
-function App() {
+import Routes from './routes';
+
+import GlobalStyle from './styles/global';
+import Theme from './styles/Theme';
+
+const App = () => {
   return (
-    <div className="App">
-
-    </div>
+    <Theme>
+      <Routes />
+      <GlobalStyle />
+    </Theme>
   );
 }
 
