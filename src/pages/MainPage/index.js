@@ -12,11 +12,11 @@ const MainPage = () => {
       <Wrapper>
         <Logo src={ImageLogo}/>
         <Title>API Github</Title>
-        <Form>
+        <Form onSubmit={() => alert(`The username is ${login}`)}>
           <Input placeholder='username' 
                  value={login} 
                  onChange={(e) => setLogin(e.target.value)}/>
-          <Button type='button' onClick={() => console.log(login)}>
+          <Button type='button' onClick={() => alert(`The username is ${login}`)}>
             <MdSearch size={25}/>
           </Button>
         </Form>
