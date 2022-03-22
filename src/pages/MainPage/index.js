@@ -13,7 +13,7 @@ const MainPage = () => {
 
   const redirectToGitPage = (login) => {
     if(login !== '') {
-      console.log(`${login}`)
+      navigate(`/git-page/${login}`)
     }
   }
 
