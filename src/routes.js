@@ -6,7 +6,7 @@ import GitPage from './pages/GitPage'
 
 export default function Router() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/git-page/:login" element={<GitPage />} />

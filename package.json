@@ -1,7 +1,7 @@
 {
   "name": "github-api-tsvo",
   "version": "0.1.0",
-  "homepage": "https://tiagosvo.github.io/api-github-01/",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
@@ -25,7 +25,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "serverdb": "json-server --watch db.json -p 3333 --routes routes.json"
+    "serverdb": "json-server --watch db.json -p 3333 --routes routes.json --id login"
   },
   "eslintConfig": {
     "extends": [

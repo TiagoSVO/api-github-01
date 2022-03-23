@@ -1,14 +1,26 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Loading, Container, Aside, Content } from './styles'
+import { getUser } from '../../services/api';
 
 const GitPage = () => {
     const { login } = useParams()
     const [loading, setLoading] = useState(true);
+    const [user, setUser] = useState();
 
-    setTimeout(() => {
+    const loadUser = async () => {
+        const responseUser = await getUser(login);
+        setUser(responseUser.data)
+    }
+
+    const loadDatas = async () => {
+        await Promise.all([loadUser()])
         setLoading(false);
-    }, 3000)
+    }
+
+    useEffect(() => {
+        loadDatas();
+    }, [])
 
     if(loading) {
         return(<Loading>Loading...</Loading>)
@@ -16,7 +28,7 @@ const GitPage = () => {
     
     return(
         <Container>
-            <Aside>Aside</Aside>
+            <Aside>Aside from {`${user.login}`}</Aside>
             <Content>Content</Content>
         </Container>
     )
