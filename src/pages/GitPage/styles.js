@@ -17,11 +17,11 @@ export const Container = styled.main`
 `
 
 export const Aside = styled.aside`
-    grid-area: "aside";
+    grid-area: aside;
     background-color: ${(props) => props.theme.colors.background};
 `
 
 export const Content = styled.article`
-    grid-area: "content";
+    grid-area: content;
     background-color: ${(props) => props.theme.colors.container};
 `

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Loading, Container, Aside, Content } from './styles'
 import { getUser } from '../../services/api';
+import Profile from './Components/Profile';
 
 const GitPage = () => {
     const { login } = useParams()
@@ -28,7 +29,9 @@ const GitPage = () => {
     
     return(
         <Container>
-            <Aside>Aside from {`${user.login}`}</Aside>
+            <Aside>
+                <Profile user={user}/>
+            </Aside>
             <Content>Content</Content>
         </Container>
     )

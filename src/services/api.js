@@ -5,3 +5,5 @@ const api = axios.create({
 })
 
 export const getUser = (login) => api.get(`/users/${login}`);
+
+export default api;
