@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.main`
   display: grid;
-  height: 100vh;
+  min-height: 100vh;
 `;
 
 export const Wrapper = styled.section`

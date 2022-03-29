@@ -2,16 +2,14 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     display: grid;
-    height: 100vh;
+    min-height: 100vh;
     grid-template-columns: 1fr;
     grid-template-rows: 250px 1fr 50px;
     grid-template-areas: 
     "header"
     "content"
     "footer";
-    box-shadow: 0px 0 10px #ccc;
-    z-index: 1;
-    gap: 10px
+    gap: 10px;
 `
 
 export const Header = styled.header`

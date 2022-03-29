@@ -7,6 +7,7 @@ import Profile from './Components/Profile';
 const GitPage = () => {
     const { login } = useParams()
     const [loading, setLoading] = useState(true);
+    const [erroLoad, settErrorLoad] = useState(false);
     const [user, setUser] = useState();
 
     const loadUser = async () => {
@@ -16,7 +17,13 @@ const GitPage = () => {
 
     const loadDatas = async () => {
         await Promise.all([loadUser()])
-        setLoading(false);
+              .then(response => {
+                setLoading(false);
+              })
+              .catch(response => {
+                settErrorLoad(true)
+                console.log(response)
+              })
     }
 
     useEffect(() => {
@@ -24,7 +31,9 @@ const GitPage = () => {
     }, [])
 
     if(loading) {
-        return(<Loading>Loading...</Loading>)
+        return(<Loading>
+            {erroLoad ? 'User not found' : 'Loading...'}
+        </Loading>)
     }
     
     return(
