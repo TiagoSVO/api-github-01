@@ -1,5 +1,4 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
 import { Avatar, Container, Content, Footer, Header, Name, Login } from './styles'
 
 const Profile = ({ user }) => (
@@ -10,7 +9,12 @@ const Profile = ({ user }) => (
             <Name>{user.name}</Name>
         </Header>
         <Content>
-            Content
+            <ProfileInfos>
+
+            </ProfileInfos>
+            <LanguageFilter>
+                
+            </LanguageFilter>
         </Content>
         <Footer>
             Footer
