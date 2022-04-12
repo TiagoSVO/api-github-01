@@ -8,21 +8,25 @@ const ProfileInfos = ({ user }) => {
     return (
       <Container>
         <FollowLabel>
-          <MdPeople />
+          <MdPeople size={20} />
           &nbsp;
           <span>
-            {user.followers} Seguidores * {user.following} Seguindo
+            {user.followers} Seguidores &#183; {user.following} Seguindo
           </span>
         </FollowLabel>
         <AddressLabel>
-          <MdApartment />
+          <MdApartment size={20} />
           &nbsp;
           <span>{user.location}</span>
         </AddressLabel>
         <BlogLinkLabel>
-          <MdLink />
+          <MdLink size={20} />
           &nbsp;
-          <span>{user.blog}</span>
+          {user.blog ? (
+            <a href={user.blog}>{user.blog}</a>
+          ) : (
+            <i>Não dispovível</i>
+          )}
         </BlogLinkLabel>
       </Container>
     );

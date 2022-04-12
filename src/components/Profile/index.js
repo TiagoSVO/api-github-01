@@ -3,7 +3,6 @@ import { Avatar, Container, Content, Footer, Header, Name, Login } from './style
 import ProfileInfos from '../ProfileInfos';
 import LanguageFilter from '../LanguageFilter';
 
-
 const Profile = ({ user }) => (
     <Container>
         <Header>
@@ -12,12 +11,8 @@ const Profile = ({ user }) => (
             <Name>{user.name}</Name>
         </Header>
         <Content>
-            <ProfileInfos user={user}>
-
-            </ProfileInfos>
-            <LanguageFilter user={user}>
-                
-            </LanguageFilter>
+            <ProfileInfos user={user} />
+            <LanguageFilter user={user} />
         </Content>
         <Footer>
             Footer

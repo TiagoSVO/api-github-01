@@ -18,6 +18,7 @@ export const Header = styled.header`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 20px 0 0 0;
 `
 
 export const Avatar = styled.img`
@@ -37,10 +38,8 @@ export const Name = styled.h2`
 
 export const Content = styled.div`
     grid-area: content;
-    background-color: blue;
     height: 100%;
 `
-
 
 export const Footer = styled.footer`
     grid-area: footer;
