@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Loading, Container, Aside, Content } from './styles'
 import { getUser } from '../../services/api';
-import Profile from '../../Components/Profile';
+import Profile from '../../components/Profile';
 
 const GitPage = () => {
     const { login } = useParams()
@@ -22,7 +22,6 @@ const GitPage = () => {
               })
               .catch(response => {
                 setErrorLoad(true)
-                console.log(response)
               })
     }
 

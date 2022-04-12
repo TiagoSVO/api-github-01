@@ -1,6 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
 
+import NunitoTTFRegular from "../assets/fonts/Nunito/static/Nunito-Bold.ttf";
+
 export default createGlobalStyle`
+  @font-face {
+    font-family: 'Nunito';
+    src: url(${NunitoTTFRegular}) format('truetype');
+  }
+
   * {
     margin: 0;
     padding: 0;

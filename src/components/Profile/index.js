@@ -1,5 +1,8 @@
 import React from 'react';
-import { Avatar, Container, Content, Footer, Header, Name, Login } from './styles'
+import { Avatar, Container, Content, Footer, Header, Name, Login } from './styles';
+import ProfileInfos from '../ProfileInfos';
+import LanguageFilter from '../LanguageFilter';
+
 
 const Profile = ({ user }) => (
     <Container>
@@ -9,10 +12,10 @@ const Profile = ({ user }) => (
             <Name>{user.name}</Name>
         </Header>
         <Content>
-            <ProfileInfos>
+            <ProfileInfos user={user}>
 
             </ProfileInfos>
-            <LanguageFilter>
+            <LanguageFilter user={user}>
                 
             </LanguageFilter>
         </Content>
