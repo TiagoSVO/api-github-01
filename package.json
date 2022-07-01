@@ -24,7 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "echo 'tiagosvo.github.io/api-github-01' > ./build/CNAME && gh-pages -d build",
+    "deploy": "echo 'https://gitname.github.io/api-github-01' > ./build/CNAME && gh-pages -d build",
     "serverdb": "json-server --watch db.json -p 3333 --routes routes.json --id login"
   },
   "eslintConfig": {
