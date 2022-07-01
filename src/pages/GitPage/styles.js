@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Loading = styled.div`
+export const Load = styled.div`
     display: grid;
     min-height: 100vh;
     place-items: center;
@@ -25,4 +25,5 @@ export const Aside = styled.aside`
 export const Content = styled.article`
     grid-area: content;
     background-color: ${(props) => props.theme.colors.container};
+    padding: 40px;
 `

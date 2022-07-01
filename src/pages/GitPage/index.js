@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Loading, Container, Aside, Content } from './styles'
+import { Load, Container, Aside, Content } from './styles'
 import { getUser } from '../../services/api';
 import Profile from '../../components/Profile';
+import Repositories from '../../components/Repositories';
+import NotFound from '../../components/NotFound';
+import Loading from '../../components/Loading';
 
 const GitPage = () => {
     const { login } = useParams()
@@ -30,9 +33,9 @@ const GitPage = () => {
     }, [])
 
     if(loading) {
-        return(<Loading>
-            {erroLoad ? 'User not found' : 'Loading...'}
-        </Loading>)
+        return(<Load>
+            {erroLoad ? <NotFound /> : <Loading />}
+        </Load>)
     }
     
     return(
@@ -40,7 +43,9 @@ const GitPage = () => {
             <Aside>
                 <Profile user={user}/>
             </Aside>
-            <Content>Content</Content>
+            <Content>
+                <Repositories />
+            </Content>
         </Container>
     )
 }
