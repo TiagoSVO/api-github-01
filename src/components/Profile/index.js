@@ -6,7 +6,7 @@ import LanguageFilter from '../LanguageFilter';
 import { useNavigate } from 'react-router-dom';
 import { getLanguagesFromRepositories } from '../../services/utils';
 
-const Profile = ({ user, repositories }) => {
+const Profile = ({ user, repositories, onClickFilter, currentLanguage }) => {
     const navigate = useNavigate();
 
     const redirectToGitPage = () => {
@@ -31,7 +31,7 @@ const Profile = ({ user, repositories }) => {
         </Header>
         <Content>
             <ProfileInfos user={user} />
-            <LanguageFilter languages={languages} />
+            <LanguageFilter languages={languages} onClickFilter={onClickFilter} currentLanguage={currentLanguage} />
         </Content>
         <Footer>
             <span>Developed by tiago.svo.dev</span>

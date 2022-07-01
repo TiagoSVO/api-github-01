@@ -3,7 +3,7 @@ import { Container, Box, BoxTitle, BoxDescription, BoxFooter, BoxLink } from './
 
 import { languagesColors } from '../../services/config';
 
-const Repositories = ({ repositories }) => {
+const Repositories = ({ repositories, currentLanguage }) => {
     repositories = repositories.map(repository => (
         {
             name: repository.name,
@@ -12,11 +12,9 @@ const Repositories = ({ repositories }) => {
             link: repository.html_url,
             color: (repository.language ? languagesColors[repository.language.toLowerCase()] : '')
         }
-    )).sort((a, b) => a['language'].toLowerCase() > b['language'].toLowerCase() ? 1 : -1)
-
-    console.log(repositories)
-
-    
+    ))
+    .filter((repository) => currentLanguage === undefined || currentLanguage === repository.language)
+    .sort((a, b) => a['language'].toLowerCase() > b['language'].toLowerCase() ? 1 : -1)    
 
     const repositoryBoxes = repositories.map(repository => {
         return (<Box key={repository.name} color={repository.color}>

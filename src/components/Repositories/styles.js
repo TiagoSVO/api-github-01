@@ -22,15 +22,18 @@ export const Box = styled.div`
     background: ${ (props) => props.theme.colors.background };
     border-radius: 3px;
     transition: 0.3s;
+    overflow:hidden;
 
     &:hover {
         box-shadow: 0px 0px 10px ${ (props) => props.color || props.theme.colors.white };
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
     `;
 
 export const BoxTitle = styled.h3`
     font-size: ${ (props) => props.theme.fontSizes.large };
+    display: flex;
+    flex-wrap: wrap;
 `;
 
 export const BoxDescription = styled.small`

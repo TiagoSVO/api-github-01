@@ -20,7 +20,9 @@ export const ItemLanguage = styled.li`
     cursor: pointer;
     transition: 0.3s;
 
-    &:hover, .selected {
+    &:hover, &.selected {
+        color: ${(props) => !props.color ? props.color : props.theme.colors.white};
+        background-color: ${(props) => props.color ? props.color : props.theme.colors.white};
         margin: 5px 15px 0px 0px;
         transition: 0.3s;
     }

@@ -13,6 +13,7 @@ const GitPage = () => {
     const [erroLoad, setErrorLoad] = useState(false);
     const [user, setUser] = useState();
     const [repositories, setRepositories] = useState();
+    const [currentLanguage, setCurrentLanguage] = useState();
 
     const loadUser = async () => {
         const responseUser = await getUser(login);
@@ -38,6 +39,10 @@ const GitPage = () => {
         loadDatas();
     }, [])
 
+    const onClickFilter = (language) => {
+        setCurrentLanguage(language)
+    }
+
     if(loading) {
         return(<Load>
             {erroLoad ? <NotFound /> : <Loading />}
@@ -47,10 +52,14 @@ const GitPage = () => {
     return(
         <Container>
             <Aside>
-                <Profile user={user} repositories={repositories}/>
+                <Profile user={user} 
+                         repositories={repositories} 
+                         onClickFilter={onClickFilter} 
+                         currentLanguage={currentLanguage}
+                />
             </Aside>
             <Content>
-                <Repositories repositories={repositories} />
+                <Repositories currentLanguage={currentLanguage} repositories={repositories} />
             </Content>
         </Container>
     )
