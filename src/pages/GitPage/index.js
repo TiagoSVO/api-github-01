@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Load, Container, Aside, Content } from './styles'
-import { getUser } from '../../services/api';
+import { getUser, getRepos } from '../../services/api';
 import Profile from '../../components/Profile';
 import Repositories from '../../components/Repositories';
 import NotFound from '../../components/NotFound';
@@ -12,20 +12,26 @@ const GitPage = () => {
     const [loading, setLoading] = useState(true);
     const [erroLoad, setErrorLoad] = useState(false);
     const [user, setUser] = useState();
+    const [repositories, setRepositories] = useState();
 
     const loadUser = async () => {
         const responseUser = await getUser(login);
         setUser(responseUser.data)
     }
 
+    const loadRepositories = async () => {
+        const responseRepos = await getRepos(login);
+        setRepositories(responseRepos.data);
+    }
+
     const loadDatas = async () => {
-        await Promise.all([loadUser()])
-              .then(response => {
+        await Promise.all([loadUser(), loadRepositories()])
+            .then(response => {
                 setLoading(false);
-              })
-              .catch(response => {
+            })
+            .catch(response => {
                 setErrorLoad(true)
-              })
+            })
     }
 
     useEffect(() => {
@@ -41,10 +47,10 @@ const GitPage = () => {
     return(
         <Container>
             <Aside>
-                <Profile user={user}/>
+                <Profile user={user} repositories={repositories}/>
             </Aside>
             <Content>
-                <Repositories />
+                <Repositories repositories={repositories} />
             </Content>
         </Container>
     )

@@ -1,14 +1,22 @@
 import React from 'react';
 import { Container, Box, BoxTitle, BoxDescription, BoxFooter, BoxLink } from './styles';
 
-const Repositories = () => {
-    const repositories = [
-        { name: 'api-github-training', description: 'Repositório para treinar a criação de um consumo de api do github', language: 'javascript', color: '#f1c40f'},
-        { name: 'python-login', description: 'Repositório para login em python', language: 'python', color: '#2ecc71' },
-        { name: 'sga-rails', description: 'Repositório do Sistema de Gerenciamento Acadêmico em Rails', language: 'ruby', color: '#e74c3c' },
-        { name: 'cra-template-basic', description: 'Template básico para projetos ReactJS', language: 'javascript', color: '#f1c40f'  },
-        { name: 'jif-django', description: 'Framework Django para JIF', language: 'python', color: '#2ecc71' },
-    ]
+import { languagesColors } from '../../services/config';
+
+const Repositories = ({ repositories }) => {
+    repositories = repositories.map(repository => (
+        {
+            name: repository.name,
+            description: repository.description,
+            language: (repository.language ? repository.language : ''),
+            link: repository.html_url,
+            color: (repository.language ? languagesColors[repository.language.toLowerCase()] : '')
+        }
+    )).sort((a, b) => a['language'].toLowerCase() > b['language'].toLowerCase() ? 1 : -1)
+
+    console.log(repositories)
+
+    
 
     const repositoryBoxes = repositories.map(repository => {
         return (<Box key={repository.name} color={repository.color}>
@@ -16,7 +24,7 @@ const Repositories = () => {
             <BoxDescription>{repository.description}</BoxDescription>
             <BoxFooter color={repository.color}>
                 <span>{repository.language}</span> 
-                <BoxLink color={repository.color} href={repository.link} targe='_blank'><strong>VER</strong></BoxLink>
+                <BoxLink color={repository.color} href={repository.link} target='_blank'><strong>VER</strong></BoxLink>
             </BoxFooter>
         </Box>)
     })

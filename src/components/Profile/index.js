@@ -4,8 +4,9 @@ import { MdOutlineKeyboardBackspace } from 'react-icons/md';
 import ProfileInfos from '../ProfileInfos';
 import LanguageFilter from '../LanguageFilter';
 import { useNavigate } from 'react-router-dom';
+import { getLanguagesFromRepositories } from '../../services/utils';
 
-const Profile = ({ user }) => {
+const Profile = ({ user, repositories }) => {
     const navigate = useNavigate();
 
     const redirectToGitPage = () => {
@@ -16,6 +17,9 @@ const Profile = ({ user }) => {
         event.preventDefault();
         redirectToGitPage();
     }
+
+    const languages = getLanguagesFromRepositories(repositories)
+
     return(<Container>
         <Header>
             <Back onClick={(event) => onClickBack(event)}>
@@ -27,7 +31,7 @@ const Profile = ({ user }) => {
         </Header>
         <Content>
             <ProfileInfos user={user} />
-            <LanguageFilter user={user} />
+            <LanguageFilter languages={languages} />
         </Content>
         <Footer>
             <span>Developed by tiago.svo.dev</span>
