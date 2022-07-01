@@ -1,11 +1,26 @@
 import React from 'react';
-import { Avatar, Container, Content, Footer, Header, Name, Login } from './styles';
+import { Avatar, Container, Content, Footer, Header, Name, Login, Back } from './styles';
+import { MdOutlineKeyboardBackspace } from 'react-icons/md';
 import ProfileInfos from '../ProfileInfos';
 import LanguageFilter from '../LanguageFilter';
+import { useNavigate } from 'react-router-dom';
 
-const Profile = ({ user }) => (
-    <Container>
+const Profile = ({ user }) => {
+    const navigate = useNavigate();
+
+    const redirectToGitPage = () => {
+        navigate(`/`)
+    }
+
+    const onClickBack = (event) => {
+        event.preventDefault();
+        redirectToGitPage();
+    }
+    return(<Container>
         <Header>
+            <Back onClick={(event) => onClickBack(event)}>
+                <MdOutlineKeyboardBackspace size={25} />
+            </Back>
             <Avatar src={`${user.avatar_url}`} />
             <Login>{user.login}</Login>
             <Name>{user.name}</Name>
@@ -15,9 +30,9 @@ const Profile = ({ user }) => (
             <LanguageFilter user={user} />
         </Content>
         <Footer>
-            Footer
+            <span>Developed by tiago.svo.dev</span>
         </Footer>
-    </Container>
-)
+    </Container>)
+}
 
 export default Profile;

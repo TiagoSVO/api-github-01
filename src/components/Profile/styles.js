@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
     display: grid;
@@ -19,6 +20,26 @@ export const Header = styled.header`
     align-items: center;
     justify-content: center;
     padding: 20px 0 0 0;
+`
+
+export const Back = styled.button`
+    display: flex;
+    align-self: flex-start;
+    border: none;
+    margin: 5px;
+    padding: 5px;
+    background: ${(props) => props.theme.colors.white}33;
+    border-radius: 50%;
+    transition: .3s;
+
+    &:hover {
+        transform: scale(1.05);
+        background: ${(props) => props.theme.colors.white}88;
+    }    
+
+    &:active {
+        transform: scale(1);
+    } 
 `
 
 export const Avatar = styled.img`
@@ -43,6 +64,10 @@ export const Content = styled.div`
 
 export const Footer = styled.footer`
     grid-area: footer;
-    background-color: green;
+    border-top: 0.1em solid ${(props) => props.theme.colors.metal};
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
 `
 

@@ -26,6 +26,9 @@ export const FollowLabel = styled.div`
 export const AddressLabel = styled.div`
 `;
 
+export const LoginLabel = styled.div`
+`;
+
 export const BlogLinkLabel = styled.div`
   display: flex;
 
