@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/api-github-01/static/css/main.e6c13ad2.css",
-    "main.js": "/api-github-01/static/js/main.9e27dfe2.js",
+    "main.js": "/api-github-01/static/js/main.e6e955de.js",
     "static/js/787.93adac6a.chunk.js": "/api-github-01/static/js/787.93adac6a.chunk.js",
     "static/media/Nunito-LightItalic.ttf": "/api-github-01/static/media/Nunito-LightItalic.1be4bf8b5435941d4876.ttf",
     "static/media/Nunito-MediumItalic.ttf": "/api-github-01/static/media/Nunito-MediumItalic.579915101d101bbfb5d2.ttf",
@@ -22,11 +22,11 @@
     "static/media/github-logo.svg": "/api-github-01/static/media/github-logo.9fcacef27fcd0a77244f5ea7919ac450.svg",
     "index.html": "/api-github-01/index.html",
     "main.e6c13ad2.css.map": "/api-github-01/static/css/main.e6c13ad2.css.map",
-    "main.9e27dfe2.js.map": "/api-github-01/static/js/main.9e27dfe2.js.map",
+    "main.e6e955de.js.map": "/api-github-01/static/js/main.e6e955de.js.map",
     "787.93adac6a.chunk.js.map": "/api-github-01/static/js/787.93adac6a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.9e27dfe2.js"
+    "static/js/main.e6e955de.js"
   ]
 }
