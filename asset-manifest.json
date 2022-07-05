@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/api-github-01/static/css/main.e6c13ad2.css",
+    "main.js": "/api-github-01/static/js/main.9e27dfe2.js",
+    "static/js/787.93adac6a.chunk.js": "/api-github-01/static/js/787.93adac6a.chunk.js",
+    "static/media/Nunito-LightItalic.ttf": "/api-github-01/static/media/Nunito-LightItalic.1be4bf8b5435941d4876.ttf",
+    "static/media/Nunito-MediumItalic.ttf": "/api-github-01/static/media/Nunito-MediumItalic.579915101d101bbfb5d2.ttf",
+    "static/media/Nunito-Italic.ttf": "/api-github-01/static/media/Nunito-Italic.1866285013bfeed6bd99.ttf",
+    "static/media/Nunito-ExtraBoldItalic.ttf": "/api-github-01/static/media/Nunito-ExtraBoldItalic.94bb3cfa949bf33a3ed6.ttf",
+    "static/media/Nunito-SemiBoldItalic.ttf": "/api-github-01/static/media/Nunito-SemiBoldItalic.e0d50cda77c40858d68c.ttf",
+    "static/media/Nunito-BoldItalic.ttf": "/api-github-01/static/media/Nunito-BoldItalic.bf268a33706099a4661e.ttf",
+    "static/media/Nunito-ExtraLightItalic.ttf": "/api-github-01/static/media/Nunito-ExtraLightItalic.6e2af0af67baa686efd9.ttf",
+    "static/media/Nunito-BlackItalic.ttf": "/api-github-01/static/media/Nunito-BlackItalic.9f3997b6fe1f53ba7415.ttf",
+    "static/media/Nunito-Medium.ttf": "/api-github-01/static/media/Nunito-Medium.6cf31fae4b8447074794.ttf",
+    "static/media/Nunito-Light.ttf": "/api-github-01/static/media/Nunito-Light.b921974df8640e22fe4b.ttf",
+    "static/media/Nunito-Regular.ttf": "/api-github-01/static/media/Nunito-Regular.fd0c54f3619265ac2f1e.ttf",
+    "static/media/Nunito-SemiBold.ttf": "/api-github-01/static/media/Nunito-SemiBold.56124591c0efd43a77f3.ttf",
+    "static/media/Nunito-Bold.ttf": "/api-github-01/static/media/Nunito-Bold.bb33ef1f12487fe03ce7.ttf",
+    "static/media/Nunito-ExtraBold.ttf": "/api-github-01/static/media/Nunito-ExtraBold.b00392d60d18b98341ee.ttf",
+    "static/media/Nunito-Black.ttf": "/api-github-01/static/media/Nunito-Black.4d26fe2da0fc6e4c0127.ttf",
+    "static/media/Nunito-ExtraLight.ttf": "/api-github-01/static/media/Nunito-ExtraLight.7dbfa6da110af49940a6.ttf",
+    "static/media/github-logo.svg": "/api-github-01/static/media/github-logo.9fcacef27fcd0a77244f5ea7919ac450.svg",
+    "index.html": "/api-github-01/index.html",
+    "main.e6c13ad2.css.map": "/api-github-01/static/css/main.e6c13ad2.css.map",
+    "main.9e27dfe2.js.map": "/api-github-01/static/js/main.9e27dfe2.js.map",
+    "787.93adac6a.chunk.js.map": "/api-github-01/static/js/787.93adac6a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.9e27dfe2.js"
+  ]
+}
